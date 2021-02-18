@@ -43,7 +43,7 @@ public class AmazonFlowTest {
     }
 
     @Test (dataProvider = "dataProviderFactory")
-    public void browserTest (String url, String expectedUrl, String search1, String item1Quantity, String search2, String item2Quantity) {
+    public void browserTest (String url, String expectedUrl, String search1, String item1Quantity, String search2, String item2Quantity) throws InterruptedException {
         //1. Go to https://www.amazon.com
         WebDriver driver = openBrowser(url, chromeDriverPath);
         waitForPageToLoad(driver);
@@ -131,11 +131,11 @@ public class AmazonFlowTest {
                 "Actual total price = " + totalPrice + "; expected total price = " + expectedTotalPrice);
     }
 
-    private void changeQuantity (WebDriver driver, int itemIndex, int newQuantity) {
+    private void changeQuantity (WebDriver driver, int itemIndex, int newQuantity) throws InterruptedException {
         CartPage cartPage = new CartPage();
         Select quantitySelection = new Select(cartPage.getItemQuantity(driver, itemIndex));
         quantitySelection.selectByValue(String.valueOf(newQuantity));
-        waitForPageToLoad(driver);
+        Thread.sleep(2000);
     }
 
     private static double round(double value, int places) {

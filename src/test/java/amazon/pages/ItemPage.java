@@ -26,10 +26,6 @@ public class ItemPage {
         }
     }
 
-    public List<WebElement> getQuantityValues (WebDriver driver) {
-        return driver.findElements(quantityValues);
-    }
-
     public WebElement getAddToCartButton (WebDriver driver) {
         return driver.findElement(addToCartButton);
     }
