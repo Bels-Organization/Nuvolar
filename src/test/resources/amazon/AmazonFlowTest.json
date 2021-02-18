@@ -1,0 +1,8 @@
+{
+  "url": "https://www.amazon.com",
+  "expectedUrl": "https://www.amazon.com/",
+  "search1": "hats for men",
+  "item1Quantity": "2",
+  "search2": "hats for women",
+  "item2Quantity": "1"
+}

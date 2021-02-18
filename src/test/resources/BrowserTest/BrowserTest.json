@@ -1,5 +1,0 @@
-{
-  "url": "https://www.google.es",
-  "expectedUrl": "https://www.google.es/",
-  "chromeDriverPath": "src/test/resources/chromedriver.exe"
-}
