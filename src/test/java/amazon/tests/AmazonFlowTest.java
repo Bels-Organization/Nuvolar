@@ -8,9 +8,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.annotations.DataProvider;
@@ -19,14 +17,13 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.text.DecimalFormat;
 import java.util.Arrays;
 import java.util.List;
 
 import static amazon.utils.BrowserUtils.*;
 import static amazon.utils.Constants.chromeDriverPath;
 import static amazon.utils.Constants.jsonPath;
-import static jsonUtils.JsonUtils.readJsonDataset;
+import static amazon.utils.JsonUtils.readJsonDataset;
 
 
 public class AmazonFlowTest {
